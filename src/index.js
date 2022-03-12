@@ -1,7 +1,7 @@
 // scroll bar
 import ReactDOM from 'react-dom';
 import { HelmetProvider } from 'react-helmet-async';
-import { BrowserRouter } from 'react-router-dom';
+import { HashRouter } from 'react-router-dom';
 import 'simplebar/src/simplebar.css';
 //
 import App from './App';
@@ -12,9 +12,9 @@ import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
   <HelmetProvider>
-    <BrowserRouter basename="/showmumu">
+    <HashRouter>
       <App />
-    </BrowserRouter>
+    </HashRouter>
   </HelmetProvider>,
   document.getElementById('root'),
 );
