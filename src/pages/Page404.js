@@ -1,8 +1,8 @@
-import { motion } from 'framer-motion';
-import { Link as RouterLink } from 'react-router-dom';
+import { Box, Button, Container, Typography } from '@mui/material';
 // material
 import { styled } from '@mui/material/styles';
-import { Box, Button, Typography, Container } from '@mui/material';
+import { motion } from 'framer-motion';
+import { Link as RouterLink } from 'react-router-dom';
 // components
 import { MotionContainer, varBounceIn } from '../components/animate';
 import Page from '../components/Page';
@@ -14,7 +14,7 @@ const RootStyle = styled(Page)(({ theme }) => ({
   minHeight: '100%',
   alignItems: 'center',
   paddingTop: theme.spacing(15),
-  paddingBottom: theme.spacing(10)
+  paddingBottom: theme.spacing(10),
 }));
 
 // ----------------------------------------------------------------------
@@ -31,19 +31,24 @@ export default function Page404() {
               </Typography>
             </motion.div>
             <Typography sx={{ color: 'text.secondary' }}>
-              Sorry, we couldn’t find the page you’re looking for. Perhaps you’ve mistyped the URL?
-              Be sure to check your spelling.
+              Sorry, we couldn’t find the page you’re looking for. Perhaps
+              you’ve mistyped the URL? Be sure to check your spelling.
             </Typography>
 
             <motion.div variants={varBounceIn}>
               <Box
                 component="img"
-                src="/static/illustrations/illustration_404.svg"
+                src="/showmumu/static/illustrations/illustration_404.svg"
                 sx={{ height: 260, mx: 'auto', my: { xs: 5, sm: 10 } }}
               />
             </motion.div>
 
-            <Button to="/" size="large" variant="contained" component={RouterLink}>
+            <Button
+              to="/"
+              size="large"
+              variant="contained"
+              component={RouterLink}
+            >
               Go to Home
             </Button>
           </Box>

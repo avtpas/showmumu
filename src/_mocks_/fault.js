@@ -34,11 +34,17 @@ const users = [...Array(24)].map((_, index) => ({
   // person in charge
   pic: {
     name: mock('@cname'),
-    avatar: `/static/mock-images/avatars/avatar_${Random.natural(1, 24)}.jpg`,
+    avatar: `/showmumu/static/mock-images/avatars/avatar_${Random.natural(
+      1,
+      24,
+    )}.jpg`,
   },
   status: Random.pick(['新', '已竣工', '待审批']),
 
-  cover: `/static/mock-images/covers/cover_${Random.natural(1, 24)}.jpg`,
+  cover: `/showmumu/static/mock-images/covers/cover_${Random.natural(
+    1,
+    24,
+  )}.jpg`,
 }));
 
 export default users;

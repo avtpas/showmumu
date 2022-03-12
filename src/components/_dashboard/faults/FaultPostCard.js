@@ -118,7 +118,7 @@ export default function FaultPostCard({ fault, detailHandler }) {
           <CardMediaStyle>
             <SvgIconStyle
               color="paper"
-              src="/static/icons/shape-avatar.svg"
+              src="/showmumu/static/icons/shape-avatar.svg"
               sx={{
                 width: 80,
                 height: 36,
