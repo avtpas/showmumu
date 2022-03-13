@@ -33,17 +33,17 @@ const sidebarConfig = [
     icon: getIcon(shoppingBagFill),
   },
   {
-    title: 'login',
+    title: '登录页',
     path: '/login',
     icon: getIcon(lockFill),
   },
   {
-    title: 'register',
+    title: '注册页',
     path: '/register',
     icon: getIcon(personAddFill),
   },
   {
-    title: 'Not found',
+    title: '错误页',
     path: '/404',
     icon: getIcon(alertTriangleFill),
   },

@@ -42,21 +42,21 @@ export default function Register() {
   return (
     <RootStyle title="Register | Minimal-UI">
       <AuthLayout>
-        Already have an account? &nbsp;
+        已有账号? &nbsp;
         <Link
           underline="none"
           variant="subtitle2"
           component={RouterLink}
           to="/login"
         >
-          Login
+          去登录
         </Link>
       </AuthLayout>
 
       <MHidden width="mdDown">
         <SectionStyle>
           <Typography variant="h3" sx={{ px: 5, mt: 10, mb: 5 }}>
-            Manage the job more effectively with Minimal
+            管理您的工作内容与效率
           </Typography>
           <img
             alt="register"
@@ -69,10 +69,10 @@ export default function Register() {
         <ContentStyle>
           <Box sx={{ mb: 5 }}>
             <Typography variant="h4" gutterBottom>
-              Get started absolutely free.
+              快速注册
             </Typography>
             <Typography sx={{ color: 'text.secondary' }}>
-              Free forever. No credit card needed.
+              或咨询管理员获得账号
             </Typography>
           </Box>
 
@@ -85,22 +85,22 @@ export default function Register() {
             align="center"
             sx={{ color: 'text.secondary', mt: 3 }}
           >
-            By registering, I agree to Minimal&nbsp;
+            注册代表您同意本系统的&nbsp;
             <Link underline="always" sx={{ color: 'text.primary' }}>
-              Terms of Service
+              服务协议
             </Link>
-            &nbsp;and&nbsp;
+            &nbsp;与&nbsp;
             <Link underline="always" sx={{ color: 'text.primary' }}>
-              Privacy Policy
+              隐私协议
             </Link>
             .
           </Typography>
 
           <MHidden width="smUp">
             <Typography variant="subtitle2" sx={{ mt: 3, textAlign: 'center' }}>
-              Already have an account?&nbsp;
+              已有账号?&nbsp;
               <Link to="/login" component={RouterLink}>
-                Login
+                去登录
               </Link>
             </Typography>
           </MHidden>

@@ -1,7 +1,7 @@
-import eyeFill from "@iconify/icons-eva/eye-fill";
-import eyeOffFill from "@iconify/icons-eva/eye-off-fill";
-import { Icon } from "@iconify/react";
-import { LoadingButton } from "@mui/lab";
+import eyeFill from '@iconify/icons-eva/eye-fill';
+import eyeOffFill from '@iconify/icons-eva/eye-off-fill';
+import { Icon } from '@iconify/react';
+import { LoadingButton } from '@mui/lab';
 // material
 import {
   Checkbox,
@@ -11,11 +11,11 @@ import {
   Link,
   Stack,
   TextField,
-} from "@mui/material";
-import { Form, FormikProvider, useFormik } from "formik";
-import { useState } from "react";
-import { Link as RouterLink, useNavigate } from "react-router-dom";
-import * as Yup from "yup";
+} from '@mui/material';
+import { Form, FormikProvider, useFormik } from 'formik';
+import { useState } from 'react';
+import { Link as RouterLink, useNavigate } from 'react-router-dom';
+import * as Yup from 'yup';
 
 // ----------------------------------------------------------------------
 
@@ -25,20 +25,20 @@ export default function LoginForm() {
 
   const LoginSchema = Yup.object().shape({
     email: Yup.string()
-      .email("Email must be a valid email address")
-      .required("Email is required"),
-    password: Yup.string().required("Password is required"),
+      .email('Email must be a valid email address')
+      .required('Email is required'),
+    password: Yup.string().required('Password is required'),
   });
 
   const formik = useFormik({
     initialValues: {
-      email: "",
-      password: "",
+      email: '',
+      password: '',
       remember: true,
     },
     validationSchema: LoginSchema,
     onSubmit: () => {
-      navigate("/dashboard", { replace: true });
+      navigate('/dashboard/app', { replace: true });
     },
   });
 
@@ -46,7 +46,7 @@ export default function LoginForm() {
     formik;
 
   const handleShowPassword = () => {
-    setShowPassword((show) => !show);
+    setShowPassword(show => !show);
   };
 
   return (
@@ -58,7 +58,7 @@ export default function LoginForm() {
             autoComplete="username"
             type="email"
             label="Email address"
-            {...getFieldProps("email")}
+            {...getFieldProps('email')}
             error={Boolean(touched.email && errors.email)}
             helperText={touched.email && errors.email}
           />
@@ -66,9 +66,9 @@ export default function LoginForm() {
           <TextField
             fullWidth
             autoComplete="current-password"
-            type={showPassword ? "text" : "password"}
+            type={showPassword ? 'text' : 'password'}
             label="Password"
-            {...getFieldProps("password")}
+            {...getFieldProps('password')}
             InputProps={{
               endAdornment: (
                 <InputAdornment position="end">
@@ -92,7 +92,7 @@ export default function LoginForm() {
           <FormControlLabel
             control={
               <Checkbox
-                {...getFieldProps("remember")}
+                {...getFieldProps('remember')}
                 checked={values.remember}
               />
             }
@@ -111,7 +111,7 @@ export default function LoginForm() {
           variant="contained"
           loading={isSubmitting}
         >
-          Login
+          登录
         </LoadingButton>
       </Form>
     </FormikProvider>
